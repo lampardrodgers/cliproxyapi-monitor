@@ -1,0 +1,15 @@
+[Unit]
+Description=CLIProxyAPI Codex Account Monitor
+Wants=network-online.target
+After=network-online.target cliproxyapi.service
+
+[Service]
+Type=simple
+WorkingDirectory=/root/cliproxyapi
+Environment=HOME=/root
+ExecStart=/usr/bin/env python3 /root/cliproxyapi/scripts/codex_account_monitor.py --config /root/cliproxyapi/config.yaml --settings-file /etc/cliproxyapi-codex-monitor.conf --loop
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

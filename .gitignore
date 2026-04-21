@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+
+config.yaml
+backups/
+logs/
+state/
+cli-proxy-api
+cdkey.txt
+static/
+autosubcribe/
+6.8.51/
+
+*.tmp
+*.swp
+*.swo

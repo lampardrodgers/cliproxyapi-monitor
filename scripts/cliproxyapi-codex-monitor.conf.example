@@ -1,0 +1,33 @@
+# Required: local CLIProxyAPI management key.
+CPA_MANAGEMENT_KEY=
+
+# Optional overrides. Leave empty to auto-detect from config.yaml.
+CPA_BASE_URL=
+CPA_AUTH_DIR=
+
+# Monitor runtime behavior.
+SCAN_INTERVAL_SECONDS=300
+PLUS_THRESHOLD=4
+PRO20_THRESHOLD=0
+PRO5_THRESHOLD=0
+TIMEZONE=Asia/Shanghai
+
+# Sidecar data directories.
+CPA_MONITOR_STATE_DIR=/root/cliproxyapi/state
+CPA_MONITOR_LOG_DIR=/root/cliproxyapi/logs
+
+# Telegram alerts. Leave empty to disable Telegram delivery.
+TG_BOT_TOKEN=
+TG_CHAT_ID=
+
+# Paid-plan weekly priming.
+# This sends one very small direct management /api-call per account per ISO week
+# only for pro/prolite/plus/team accounts whose weekly window has not started yet.
+PRIME_DISABLED=0
+PRIME_FAILURE_COOLDOWN_SECONDS=43200
+CODEX_PRIME_MODEL=gpt-5.4-mini
+CODEX_PRIME_URL=https://chatgpt.com/backend-api/codex
+
+# Reserved hook. Logged only in v1 and not executed.
+LOW_PLUS_HOOK=
+LOW_PLUS_HOOK_ENABLED=0
