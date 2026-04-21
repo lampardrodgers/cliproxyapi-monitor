@@ -61,6 +61,14 @@ Recommended active file:
 /etc/cliproxyapi-codex-monitor.conf
 ```
 
+Create it from the example:
+
+```bash
+cp scripts/cliproxyapi-codex-monitor.conf.example /etc/cliproxyapi-codex-monitor.conf
+vim /etc/cliproxyapi-codex-monitor.conf
+systemctl restart cliproxyapi-codex-monitor
+```
+
 Important keys:
 
 - `CPA_MANAGEMENT_KEY`

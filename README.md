@@ -37,13 +37,39 @@ It runs as a sidecar service, not in the main request path. Its job is to check 
 ## Install
 
 1. Copy the repo to your server
-2. Edit the config example into a real config file
+2. Turn the example config into a real config file
 3. Fill in at least `CPA_MANAGEMENT_KEY`
 4. Optionally fill in Telegram settings
 5. Install the service
 
 ```bash
 bash scripts/install_codex_monitor_service.sh
+```
+
+## Create The Real Config File
+
+The example file is:
+
+```bash
+scripts/cliproxyapi-codex-monitor.conf.example
+```
+
+Turn it into the real runtime config with:
+
+```bash
+cp scripts/cliproxyapi-codex-monitor.conf.example /etc/cliproxyapi-codex-monitor.conf
+```
+
+Then edit it:
+
+```bash
+vim /etc/cliproxyapi-codex-monitor.conf
+```
+
+After changing the config, restart the monitor:
+
+```bash
+systemctl restart cliproxyapi-codex-monitor
 ```
 
 ## Config
